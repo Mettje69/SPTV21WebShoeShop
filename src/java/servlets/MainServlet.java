@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
 import session.HistoryFacade;
 import session.ModelFacade;
 import session.UserFacade;
-import tools.PasswordProtected;
+import tools.PasswordEncrypt;
 
 /**
  *
@@ -354,10 +354,10 @@ public class MainServlet extends HttpServlet {
 
                 if(editPassword1.equals(editPassword2)) {
                     authUser.setLogin(editLogin); 
-                    PasswordProtected passwordProtected = new PasswordProtected();
-                    String salt = passwordProtected.getSalt();
+                    PasswordEncrypt passwordEncrypt = new PasswordEncrypt();
+                    String salt = passwordEncrypt.getSalt();
                     authUser.setSalt(salt);
-                    String protectedEditUserPassword = passwordProtected.getProtectedPassword(editPassword1, salt);
+                    String protectedEditUserPassword = passwordEncrypt.getProtectedPassword(editPassword1, salt);
                     authUser.setPassword(protectedEditUserPassword);
                     userFacade.edit(authUser);
                     request.setAttribute("info", "Данные успешно изменены!");

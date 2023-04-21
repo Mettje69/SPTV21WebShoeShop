@@ -5,8 +5,9 @@
 </head>
 <style>
     #dropdownMenuLink {
-        background-color: #212529;
-        border: none;
+        background-color: #f7f7f7;
+        border: 1px;
+        border-color: black;
     }
     
     dropdownMenuLink {
@@ -14,15 +15,15 @@
     }
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a style="font-size: 22px; font-weight: 500; margin-bottom: 5px;" class="navbar-brand" href="index">SHOESHOP</a>
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <c:if test="${authUser.role eq 'ADMINISTRATOR' or authUser.role eq 'SECONDADMIN'}">
-                <a style="font-size: 18px; color: white; margin-bottom: 2px; margin-left: 10px;" class="navbar-brand" href="showBuyModel">Купить обувь</a>
+                <a style="font-size: 18px; font-weight: 500; color: black; margin-bottom: 2px; margin-left: 10px;" class="navbar-brand" role="button" href="showBuyModel">Купить обувь</a>
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" style=" margin-right: 4px" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-secondary dropdown-toggle" style=" margin-right: 4px; color: black; font-weight: 500;" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                       Панель админа
                     </a>
 
@@ -32,7 +33,7 @@
                     </ul>
                 </div>
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" style="margin-right: 4px" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-secondary dropdown-toggle" style="margin-right: 4px; color: black; font-weight: 500;" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                       Добавить
                     </a>
 
@@ -44,7 +45,7 @@
                 </div>
 
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" style="margin-right: 4px" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-secondary dropdown-toggle" style="margin-right: 4px; color: black; font-weight: 500;" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         Редактировать
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -56,7 +57,7 @@
                 </div>
 
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" style="margin-right: 40px" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" style="margin-right: 40px; color: black; font-weight: 500;" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         Удалить
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -67,7 +68,7 @@
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <c:catch var="user">
-                            <p class="nav-item" style="margin-left: 680px; margin-top: 2px; color: white;">Ваш текущий баланс: ${authUser.money}$</p>
+                            <p class="nav-item" style="margin-left: 680px; margin-top: 2px; color: black; font-weight: 500;">Ваш текущий баланс: ${authUser.money}$</p>
                         </c:catch>
                     </li>
                 </ul>
@@ -143,12 +144,12 @@
             <ul class="navbar-nav  mb-2 mb-lg-0">
                 <c:if test="${authUser eq null}">
                     <li class="nav-item">
-                      <a class="nav-link" href="showIndex">Войти</a>
+                        <a class="nav-link" href="showIndex" style="font-weight: 700;">Войти</a>
                     </li>
                 </c:if>
                 <c:if test="${authUser ne null}">
                     <li class="nav-item">
-                      <a class="nav-link" href="logout">Выйти</a>
+                        <a class="nav-link" href="logout" style="font-weight: 700;">Выйти</a>
                     </li>
                 </c:if>
             </ul>

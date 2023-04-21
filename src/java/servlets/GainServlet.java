@@ -64,7 +64,7 @@ public class GainServlet extends HttpServlet {
                 for (History history : historiesList) {
                     sumGain = sumGain + history.getGain();
                 }
-                request.setAttribute("allGain", "Прибыль за всё время работы магазаниа: " + sumGain + "$");
+                request.setAttribute("allGain", "Прибыль за всё время работы магазаниа: " + sumGain + "€");
                 request.getRequestDispatcher("/WEB-INF/gain.jsp").forward(request, response);
                 break;
             }
@@ -155,7 +155,7 @@ public class GainServlet extends HttpServlet {
                 }
                 break;
         }  
-            request.setAttribute("gainForAMonth", gainForAMonth + "$");
+            request.setAttribute("gainForAMonth", gainForAMonth + "€");
             request.getRequestDispatcher("/showGain").forward(request, response);
         }
 

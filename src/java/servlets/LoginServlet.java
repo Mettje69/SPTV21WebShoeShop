@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import session.UserFacade;
-import tools.PasswordProtected;
+import tools.PasswordEncrypt;
 
 /**
  *
@@ -38,10 +38,10 @@ public class LoginServlet extends HttpServlet {
         user.setPhone("58570983");
         user.setMoney(900);
         user.setLogin("admin");
-        PasswordProtected passwordProtected = new PasswordProtected();
-        String salt = passwordProtected.getSalt();
+        PasswordEncrypt passwordEncrypt = new PasswordEncrypt();
+        String salt = passwordEncrypt.getSalt();
         user.setSalt(salt);
-        String adminPassword = passwordProtected.getProtectedPassword("12345", salt);
+        String adminPassword = passwordEncrypt.getProtectedPassword("12345", salt);
         user.setPassword(adminPassword);
         user.setRole("ADMINISTRATOR");
         userFacade.create(user);
@@ -76,8 +76,8 @@ public class LoginServlet extends HttpServlet {
                 }
                 //Authorization
                 String salt = authUser.getSalt();
-                PasswordProtected passwordProtected = new PasswordProtected();
-                password = passwordProtected.getProtectedPassword(password, salt);
+                PasswordEncrypt passwordEncrypt = new PasswordEncrypt();
+                password = passwordEncrypt.getProtectedPassword(password, salt);
                 if(!password.equals(authUser.getPassword())){
                     request.setAttribute("info", "Неверный логин или пароль");
                     request.getRequestDispatcher("/showIndex").forward(request, response);
@@ -154,10 +154,10 @@ public class LoginServlet extends HttpServlet {
                 newUser.setPhone(phone);
                 newUser.setMoney(money);
                 newUser.setLogin(login);
-                passwordProtected = new PasswordProtected();
-                salt = passwordProtected.getSalt();
+                passwordEncrypt = new PasswordEncrypt();
+                salt = passwordEncrypt.getSalt();
                 newUser.setSalt(salt);
-                password1 = passwordProtected.getProtectedPassword(password1, salt);
+                password1 = passwordEncrypt.getProtectedPassword(password1, salt);
                 newUser.setPassword(password1);
                 newUser.setRole("BUYER");
                 userFacade.create(newUser);

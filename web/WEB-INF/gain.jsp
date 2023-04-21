@@ -17,24 +17,22 @@
         <p class="d-flex justify-content-center">
             ${gainForAMonth}&nbsp;
         </p>
-        <div class="d-flex justify-content-center" style="font-size: 18px; font-family: Molot">
-            <div class="list-group d-flex align-content-start flex-wrap" style="width: 35em; text-align: center">
-                <a href="gainForSeptember" class="list-group-item list-group-item-action list-group-item-warning">Сентябрь</a>
-                <a href="gainForOctober" class="list-group-item list-group-item-action list-group-item-warning">Октябрь</a>
-                <a href="gainForNovember" class="list-group-item list-group-item-action list-group-item-warning">Ноябрь</a>
+        <div class="d-flex justify-content-center" style="font-size: 18px;">
+            <div class="list-group d-flex align-content-start flex-wrap" style="width: 35em; text-align: center; padding-bottom: 100px">
+                
+                <a href="gainForJanuary" class="list-group-item list-group-item-action ">Январь</a>
+                <a href="gainForFebruary" class="list-group-item list-group-item-action ">Февраль</a>
+                <a href="gainForMarch" class="list-group-item list-group-item-action ">Март</a>
+                <a href="gainForApril" class="list-group-item list-group-item-action ">Апрель</a>
+                <a href="gainForMay" class="list-group-item list-group-item-action ">Май</a>
+                <a href="gainForJune" class="list-group-item list-group-item-action ">Июнь</a>
+                <a href="gainForJuly" class="list-group-item list-group-item-action ">Июль</a>
+                <a href="gainForAugust" class="list-group-item list-group-item-action ">Август</a>
+                <a href="gainForSeptember" class="list-group-item list-group-item-action ">Сентябрь</a>
+                <a href="gainForOctober" class="list-group-item list-group-item-action ">Октябрь</a>
+                <a href="gainForNovember" class="list-group-item list-group-item-action ">Ноябрь</a>
+                <a href="gainForDecember" class="list-group-item list-group-item-action ">Декабрь</a>
 
-                <a href="gainForMarch" class="list-group-item list-group-item-action list-group-item-info">Март</a>
-                <a href="gainForApril" class="list-group-item list-group-item-action list-group-item-info">Апрель</a>
-                <a href="gainForMay" class="list-group-item list-group-item-action list-group-item-info">Май</a>
-            </div>
-            <div class="list-group d-flex align-content-start flex-wrap" style="width: 35em; text-align: center">
-                <a href="gainForDecember" class="list-group-item list-group-item-action list-group-item-primary">Декабрь</a>
-                <a href="gainForJanuary" class="list-group-item list-group-item-action list-group-item-primary">Январь</a>
-                <a href="gainForFebruary" class="list-group-item list-group-item-action list-group-item-primary">Февраль</a>
-
-                <a href="gainForJune" class="list-group-item list-group-item-action list-group-item-danger">Июнь</a>
-                <a href="gainForJuly" class="list-group-item list-group-item-action list-group-item-danger">Июль</a>
-                <a href="gainForAugust" class="list-group-item list-group-item-action list-group-item-danger">Август</a>
             </div>   
         </div>
     </div>
